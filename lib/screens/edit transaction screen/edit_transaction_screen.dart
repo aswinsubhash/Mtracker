@@ -46,12 +46,6 @@ class _ScreenEditTransactionState extends State<ScreenEditTransaction> {
     super.initState();
   }
 
-  @override
-  void dispose() {
-    editAmountController.dispose();
-    editCategoryController.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -147,7 +141,7 @@ class _ScreenEditTransactionState extends State<ScreenEditTransaction> {
         editedAmount == 0 ||
         editedAmount == null ||
         editedCategory == '') {
-      showError(context);
+      //showError(context);
     } else {
       DbHelper dbHelper = DbHelper();
       await dbHelper.updateData(
@@ -156,7 +150,7 @@ class _ScreenEditTransactionState extends State<ScreenEditTransaction> {
         editedCategory!,
         type,
         widget.index,
-      );
+       );
       if (widget.amount != editedAmount ||
           widget.category != editedCategory ||
           widget.date != editedDate ||

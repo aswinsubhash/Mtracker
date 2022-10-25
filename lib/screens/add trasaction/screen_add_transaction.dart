@@ -33,14 +33,8 @@ class _ScreenAddTrasactionState extends State<ScreenAddTrasaction> {
       amount = int.tryParse(amountController.text);
     });
     type = 'Income';
+    currentSelectedIntex = 1;
     super.initState();
-  }
-
-  @override
-  void dispose() {
-    categoryController.dispose();
-    amountController.dispose();
-    super.dispose();
   }
 
   @override
@@ -137,7 +131,8 @@ class _ScreenAddTrasactionState extends State<ScreenAddTrasaction> {
           MaterialPageRoute(builder: (ctx3) {
         return const DashScreen();
       }), (route) => false);
-    }
+     
+     }
 
     setState(() {
       amountController.clear();
