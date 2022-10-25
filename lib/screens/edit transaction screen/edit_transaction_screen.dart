@@ -45,7 +45,12 @@ class _ScreenEditTransactionState extends State<ScreenEditTransaction> {
     });
     super.initState();
   }
-
+@override
+  void dispose() {
+    editAmountController.dispose();
+    editCategoryController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
