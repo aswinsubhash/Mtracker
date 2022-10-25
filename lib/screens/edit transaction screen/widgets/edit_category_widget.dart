@@ -10,13 +10,20 @@ class EditCategoryWidget extends StatefulWidget {
   State<EditCategoryWidget> createState() => _EditCategoryWidgetState();
 }
 
- String? editedCategory;
+String? editedCategory;
 late TextEditingController editCategoryController;
 
 class _EditCategoryWidgetState extends State<EditCategoryWidget> {
   @override
+  void initState() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      editCategoryController.text = widget.editCategory;
+    });
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    editCategoryController.text = widget.editCategory;
     return Container(
       width: 350,
       height: 60,
@@ -41,8 +48,8 @@ class _EditCategoryWidgetState extends State<EditCategoryWidget> {
               child: Padding(
                 padding: const EdgeInsets.all(6.0),
                 child: TextField(
-                    inputFormatters: [
-                     LengthLimitingTextInputFormatter(10),
+                  inputFormatters: [
+                    LengthLimitingTextInputFormatter(10),
                   ],
                   controller: editCategoryController,
                   keyboardType: TextInputType.text,

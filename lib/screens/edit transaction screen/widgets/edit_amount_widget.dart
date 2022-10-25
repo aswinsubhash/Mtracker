@@ -15,8 +15,15 @@ late TextEditingController editAmountController;
 
 class _EditAmountWidgetState extends State<EditAmountWidget> {
   @override
+  void initState() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      editAmountController.text = widget.editAmount.toString();
+    });
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    editAmountController.text = widget.editAmount.toString();
     return Container(
       width: 350,
       height: 60,
@@ -41,8 +48,8 @@ class _EditAmountWidgetState extends State<EditAmountWidget> {
               child: Padding(
                 padding: const EdgeInsets.all(6.0),
                 child: TextField(
-                    inputFormatters: [
-                     LengthLimitingTextInputFormatter(10),
+                  inputFormatters: [
+                    LengthLimitingTextInputFormatter(10),
                   ],
                   controller: editAmountController,
                   keyboardType: TextInputType.number,

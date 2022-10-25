@@ -66,7 +66,7 @@ class _DashScreenState extends State<DashScreen> {
                   onTap: (newIntex) {
                     setState(() {
                       currentSelectedIntex = newIntex;
-                    });
+                    }); 
                   },
                   items: const [
                     BottomNavigationBarItem(

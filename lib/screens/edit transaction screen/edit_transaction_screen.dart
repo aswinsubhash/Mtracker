@@ -141,7 +141,7 @@ class _ScreenEditTransactionState extends State<ScreenEditTransaction> {
         editedAmount == 0 ||
         editedAmount == null ||
         editedCategory == '') {
-      //showError(context);
+        showError(context);
     } else {
       DbHelper dbHelper = DbHelper();
       await dbHelper.updateData(

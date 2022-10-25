@@ -36,6 +36,12 @@ class _ScreenAddTrasactionState extends State<ScreenAddTrasaction> {
     currentSelectedIntex = 1;
     super.initState();
   }
+  @override
+  void dispose() {
+    amountController.dispose();
+    categoryController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {

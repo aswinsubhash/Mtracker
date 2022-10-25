@@ -47,18 +47,20 @@ class _ScreenAllTransactionsState extends State<ScreenAllTransactions> {
   DbHelper dbHelper = DbHelper();
   @override
   void initState() {
- currentSelectedIntex = 1;
+    currentSelectedIntex = 1;
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-      onWillPop: () async{
+      onWillPop: () async {
         currentSelectedIntex = 0;
-        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (ctx) {
-          return const DashScreen();
-        },));
+        Navigator.of(context).pushReplacement(MaterialPageRoute(
+          builder: (ctx) {
+            return const DashScreen();
+          },
+        ));
         return false;
       },
       child: Scaffold(
@@ -66,7 +68,7 @@ class _ScreenAllTransactionsState extends State<ScreenAllTransactions> {
           centerTitle: true,
           title: const Text(
             'All Transactions',
-            style: TextStyle(color: Colors.black,fontSize: 22),
+            style: TextStyle(color: Colors.black, fontSize: 22),
           ),
           elevation: 0,
           backgroundColor: Colors.transparent,
@@ -79,9 +81,8 @@ class _ScreenAllTransactionsState extends State<ScreenAllTransactions> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-    
                     //first drodown
-                    
+
                     Container(
                       width: dataFilterValue == 'This Year'
                           ? MediaQuery.of(context).size.width * 0.26
@@ -116,9 +117,9 @@ class _ScreenAllTransactionsState extends State<ScreenAllTransactions> {
                       ),
                     ),
                     commonSizedBox(10),
-    
+
                     //second dropdown
-    
+
                     Container(
                       width: dataFilterValue == 'This Year'
                           ? MediaQuery.of(context).size.width * 0.26
@@ -155,10 +156,10 @@ class _ScreenAllTransactionsState extends State<ScreenAllTransactions> {
                         ),
                       ),
                     ),
-                     commonSizedBox(10),
-                     
+                    commonSizedBox(10),
+
                     //third dropdown
-                   
+
                     dataFilterValue == 'This Year'
                         ? Container(
                             width: MediaQuery.of(context).size.width * 0.26,
@@ -204,41 +205,42 @@ class _ScreenAllTransactionsState extends State<ScreenAllTransactions> {
               ),
               commonSizedBox(20),
               FutureBuilder<List<TransactionModel>>(
-                  future: dbHelper.fetch(),
-                  builder: (context, snapshot) {
-                    if (snapshot.hasError) {
-                      return const Text('');
-                    }
-                    if (snapshot.hasData) {
-                      if (snapshot.data!.isEmpty) {
-                        flag = 0;
-                        return Column(
-                          children: [
-                            commonSizedBox(100),
-                            Container(
-                              width: MediaQuery.of(context).size.width * 0.8,
-                              height: MediaQuery.of(context).size.height * 0.35,
-                              decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage(
-                                      'assets/images/no-data-found.png'),
-                                ),
+                future: dbHelper.fetch(),
+                builder: (context, snapshot) {
+                  if (snapshot.hasError) {
+                    return const Text('');
+                  }
+                  if (snapshot.hasData) {
+                    if (snapshot.data!.isEmpty) {
+                      flag = 0;
+                      return Column(
+                        children: [
+                          commonSizedBox(100),
+                          Container(
+                            width: MediaQuery.of(context).size.width * 0.8,
+                            height: MediaQuery.of(context).size.height * 0.35,
+                            decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage(
+                                    'assets/images/no-data-found.png'),
                               ),
                             ),
-                          ],
-                        );
-                      }
+                          ),
+                        ],
+                      );
                     }
-                    if (snapshot.data == null) {
-                      return const Text('');
-                    }
-                    return Column(
-                      children: [
-                        AllTransactionWidget(data: snapshot.data!),
-                        commonSizedBox(90),
-                      ],
-                    );
-                  })
+                  }
+                  if (snapshot.data == null) {
+                    return const Text('');
+                  }
+                  return Column(
+                    children: [
+                      AllTransactionWidget(data: snapshot.data!),
+                      commonSizedBox(90),
+                    ],
+                  );
+                },
+              )
             ],
           ),
         ),
