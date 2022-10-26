@@ -64,7 +64,6 @@ class _ScreenHomeState extends State<ScreenHome> {
             return AlertDialog(
               title: const Text('Confirm Exit?'),
               content: const Text('Are you sure you want to exit?'),
-              actionsAlignment: MainAxisAlignment.spaceBetween,
               actions: [
                 TextButton(
                   onPressed: () {

@@ -45,12 +45,6 @@ class _ScreenEditTransactionState extends State<ScreenEditTransaction> {
     });
     super.initState();
   }
-@override
-  void dispose() {
-    editAmountController.dispose();
-    editCategoryController.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -146,7 +140,7 @@ class _ScreenEditTransactionState extends State<ScreenEditTransaction> {
         editedAmount == 0 ||
         editedAmount == null ||
         editedCategory == '') {
-        showError(context);
+      showError(context);
     } else {
       DbHelper dbHelper = DbHelper();
       await dbHelper.updateData(
@@ -155,7 +149,7 @@ class _ScreenEditTransactionState extends State<ScreenEditTransaction> {
         editedCategory!,
         type,
         widget.index,
-       );
+      );
       if (widget.amount != editedAmount ||
           widget.category != editedCategory ||
           widget.date != editedDate ||
@@ -195,6 +189,9 @@ class _ScreenEditTransactionState extends State<ScreenEditTransaction> {
           title: const Text('Are you sure?'),
           content: const Text(
             'Do you really want to delete this transaction?',
+            style: TextStyle(
+              height: 1.5
+            ),
           ),
           actions: [
             TextButton(

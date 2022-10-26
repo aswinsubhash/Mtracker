@@ -868,7 +868,10 @@ class _AllTransactionWidgetState extends State<AllTransactionWidget> {
       builder: (ctx1) {
         return AlertDialog(
           title: const Text('Are you sure?'),
-          content: const Text('Do you really want to delete this transaction?'),
+          content: const Text(
+            'Do you really want to delete this transaction?',
+            style: TextStyle(height: 1.5),
+          ),
           actions: [
             TextButton(
               onPressed: () {
@@ -912,6 +915,7 @@ class _AllTransactionWidgetState extends State<AllTransactionWidget> {
   onTileTap() {
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
+        elevation: 0,
         backgroundColor: Colors.black38,
         shape: StadiumBorder(),
         width: 200,
