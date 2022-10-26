@@ -646,103 +646,108 @@ class _AllTransactionWidgetState extends State<AllTransactionWidget> {
 
   expenseTileWidget(
       int value, String category, DateTime date, String edittype, int index) {
-    return Slidable(
-      startActionPane: ActionPane(
-        motion: const ScrollMotion(),
-        children: [
-          SlidableAction(
-            borderRadius: BorderRadius.circular(20),
-            onPressed: (BuildContext context) {
-              delete(context, index);
-            },
-            backgroundColor: const Color.fromARGB(255, 213, 20, 6),
-            label: 'Delete',
-            icon: Icons.delete,
-          ),
-          SlidableAction(
-            borderRadius: BorderRadius.circular(20),
-            onPressed: (BuildContext context) {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (ctx) {
-                    return ScreenEditTransaction(
-                      amount: value,
-                      category: category,
-                      date: date,
-                      editedType: edittype,
-                      index: index,
-                    );
-                  },
-                ),
-              );
-            },
-            backgroundColor: const Color.fromARGB(255, 3, 161, 22),
-            label: 'Edit',
-            icon: Icons.edit,
-          ),
-        ],
-      ),
-      child: Container(
-        margin: const EdgeInsets.only(left: 1, top: 5, bottom: 5),
-        padding: const EdgeInsets.all(15),
-        decoration: BoxDecoration(
-            color: Colors.grey[350], borderRadius: BorderRadius.circular(20)),
-        child: Column(
+    return InkWell(
+      onDoubleTap: () => onTileTap(),
+      onLongPress: () => onTileTap(),
+      child: Slidable(
+        startActionPane: ActionPane(
+          motion: const ScrollMotion(),
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    const CircleAvatar(
-                      radius: 23,
-                      backgroundColor: Color.fromARGB(255, 244, 4, 4),
-                      child: Icon(
-                        Icons.keyboard_double_arrow_up_rounded,
-                        color: Colors.white,
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text(
-                              'Debit',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20),
-                            ),
-                            Text('${date.day} ${widget.month[date.month - 1]}')
-                          ],
-                        )
-                      ],
-                    )
-                  ],
-                ),
-                Row(
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Text(
-                          '- ₹$value',
-                          style: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
-                          ),
-                        ),
-                        Text(category)
-                      ],
-                    )
-                  ],
-                )
-              ],
-            )
+            SlidableAction(
+              borderRadius: BorderRadius.circular(20),
+              onPressed: (BuildContext context) {
+                delete(context, index);
+              },
+              backgroundColor: const Color.fromARGB(255, 213, 20, 6),
+              label: 'Delete',
+              icon: Icons.delete,
+            ),
+            SlidableAction(
+              borderRadius: BorderRadius.circular(20),
+              onPressed: (BuildContext context) {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (ctx) {
+                      return ScreenEditTransaction(
+                        amount: value,
+                        category: category,
+                        date: date,
+                        editedType: edittype,
+                        index: index,
+                      );
+                    },
+                  ),
+                );
+              },
+              backgroundColor: const Color.fromARGB(255, 3, 161, 22),
+              label: 'Edit',
+              icon: Icons.edit,
+            ),
           ],
+        ),
+        child: Container(
+          margin: const EdgeInsets.only(left: 1, top: 5, bottom: 5),
+          padding: const EdgeInsets.all(15),
+          decoration: BoxDecoration(
+              color: Colors.grey[350], borderRadius: BorderRadius.circular(20)),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      const CircleAvatar(
+                        radius: 23,
+                        backgroundColor: Color.fromARGB(255, 244, 4, 4),
+                        child: Icon(
+                          Icons.keyboard_double_arrow_up_rounded,
+                          color: Colors.white,
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text(
+                                'Debit',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 20),
+                              ),
+                              Text(
+                                  '${date.day} ${widget.month[date.month - 1]}')
+                            ],
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text(
+                            '- ₹$value',
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),
+                          ),
+                          Text(category)
+                        ],
+                      )
+                    ],
+                  )
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
@@ -752,101 +757,106 @@ class _AllTransactionWidgetState extends State<AllTransactionWidget> {
 
   incomeTileWidget(
       int value, String category, DateTime date, String edittype, int index) {
-    return Slidable(
-      startActionPane: ActionPane(
-        motion: const ScrollMotion(),
-        children: [
-          SlidableAction(
-            borderRadius: BorderRadius.circular(20),
-            onPressed: (BuildContext context) {
-              delete(context, index);
-            },
-            backgroundColor: const Color.fromARGB(255, 213, 20, 6),
-            label: 'Delete',
-            icon: Icons.delete,
-          ),
-          SlidableAction(
-            borderRadius: BorderRadius.circular(20),
-            onPressed: (BuildContext context) {
-              Navigator.of(context).push(
-                MaterialPageRoute(builder: (ctx) {
-                  return ScreenEditTransaction(
-                    amount: value,
-                    category: category,
-                    date: date,
-                    editedType: edittype,
-                    index: index,
-                  );
-                }),
-              );
-            },
-            backgroundColor: const Color.fromARGB(255, 3, 161, 22),
-            label: 'Edit',
-            icon: Icons.edit,
-          ),
-        ],
-      ),
-      child: Container(
-        margin: const EdgeInsets.only(left: 1, top: 5, bottom: 5),
-        padding: const EdgeInsets.all(15),
-        decoration: BoxDecoration(
-            color: Colors.grey[350], borderRadius: BorderRadius.circular(20)),
-        child: Column(
+    return InkWell(
+      onDoubleTap: () => onTileTap(),
+      onLongPress: () => onTileTap(),
+      child: Slidable(
+        startActionPane: ActionPane(
+          motion: const ScrollMotion(),
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    const CircleAvatar(
-                      radius: 23,
-                      backgroundColor: Color.fromARGB(255, 0, 204, 8),
-                      child: Icon(
-                        Icons.keyboard_double_arrow_down_rounded,
-                        color: Colors.white,
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text(
-                              'Credit',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20),
-                            ),
-                            Text('${date.day} ${widget.month[date.month - 1]}')
-                          ],
-                        )
-                      ],
-                    )
-                  ],
-                ),
-                Row(
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Text(
-                          '+ ₹$value',
-                          style: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
-                          ),
-                        ),
-                        Text(category)
-                      ],
-                    )
-                  ],
-                )
-              ],
-            )
+            SlidableAction(
+              borderRadius: BorderRadius.circular(20),
+              onPressed: (BuildContext context) {
+                delete(context, index);
+              },
+              backgroundColor: const Color.fromARGB(255, 213, 20, 6),
+              label: 'Delete',
+              icon: Icons.delete,
+            ),
+            SlidableAction(
+              borderRadius: BorderRadius.circular(20),
+              onPressed: (BuildContext context) {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (ctx) {
+                    return ScreenEditTransaction(
+                      amount: value,
+                      category: category,
+                      date: date,
+                      editedType: edittype,
+                      index: index,
+                    );
+                  }),
+                );
+              },
+              backgroundColor: const Color.fromARGB(255, 3, 161, 22),
+              label: 'Edit',
+              icon: Icons.edit,
+            ),
           ],
+        ),
+        child: Container(
+          margin: const EdgeInsets.only(left: 1, top: 5, bottom: 5),
+          padding: const EdgeInsets.all(15),
+          decoration: BoxDecoration(
+              color: Colors.grey[350], borderRadius: BorderRadius.circular(20)),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      const CircleAvatar(
+                        radius: 23,
+                        backgroundColor: Color.fromARGB(255, 0, 204, 8),
+                        child: Icon(
+                          Icons.keyboard_double_arrow_down_rounded,
+                          color: Colors.white,
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text(
+                                'Credit',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 20),
+                              ),
+                              Text(
+                                  '${date.day} ${widget.month[date.month - 1]}')
+                            ],
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text(
+                            '+ ₹$value',
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),
+                          ),
+                          Text(category)
+                        ],
+                      )
+                    ],
+                  )
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
@@ -896,6 +906,21 @@ class _AllTransactionWidgetState extends State<AllTransactionWidget> {
           ],
         );
       },
+    );
+  }
+
+  onTileTap() {
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        backgroundColor: Colors.black38,
+        shape: StadiumBorder(),
+        width: 200,
+        behavior: SnackBarBehavior.floating,
+        content: Padding(
+          padding: EdgeInsets.only(left: 8),
+          child: Text("Swipe to edit transaction"),
+        ),
+      ),
     );
   }
 }
