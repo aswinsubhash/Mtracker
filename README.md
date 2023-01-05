@@ -1,16 +1,23 @@
-# mtracker
+# Mtracker
 
-A new Flutter project.
+Mtracker is a personal finance manager app, built to help you save money for future.With Mtracker app can track your daily spending and daily income. The app will generate monthly and yearly report of your spending. The app is built in with flutter and Hive as database,
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Libraries and packages used
+- Animated snackbar
+- Auto size text
+- Fl chart
+- Flutter slidable
+- Google fonts
+- Hive flutter
+- Shared preferences
+- Time zone
+- Url launcher
+- Flutter launcher icon
+- Build runner
+- Hive generator
+
+
