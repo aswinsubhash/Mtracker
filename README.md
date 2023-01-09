@@ -45,7 +45,7 @@ User can do  the following:
 
 - Statistics screen of this application
 
-![screenshot](All.png)
+![screenshot](Stat.png)
 
 
 
