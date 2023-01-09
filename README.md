@@ -10,7 +10,7 @@ spent.
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Screeshots](#screenshots)
+- [Screenshots](#screenshots)
 - [Packages and Credits](#packages-and-credits)
 - [Google Play Store](#google-play-store)
 - [License](#license)
