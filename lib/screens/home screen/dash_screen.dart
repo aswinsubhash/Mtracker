@@ -14,7 +14,7 @@ class DashScreen extends StatefulWidget {
 int currentSelectedIntex = 0;
 class _DashScreenState extends State<DashScreen> {
  
- 
+
   @override
   Widget build(BuildContext context) {
     final List<Widget> pages = [
@@ -48,7 +48,7 @@ class _DashScreenState extends State<DashScreen> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: Stack(
         children: [
-         pages[currentSelectedIntex],
+        pages[currentSelectedIntex],
           Padding(
             padding: const EdgeInsets.all(20),
             child: Align(

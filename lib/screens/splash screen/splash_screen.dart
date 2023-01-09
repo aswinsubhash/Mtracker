@@ -56,6 +56,7 @@ class _ScreenSplashState extends State<ScreenSplash> {
     if (userLoggedIn == null || userLoggedIn.isEmpty) {
       gotoOnboard();
     } else {
+      currentSelectedIntex = 0;
       await Future.delayed(
         const Duration(seconds: 3),
       );
