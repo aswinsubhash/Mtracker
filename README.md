@@ -34,15 +34,49 @@ User can do  the following:
 - Montior transaction flow using the graphs in the statistics screen were the user can see the type wise graphs of current and current year
 
 ## Screenshots
-- Home Screen of this application
 
-![screenshot](Home.png) 
+- Home screen of this application
+
+![screenshot](Home.png)
+
+- All trasaction screen of this application
+
+![screenshot](All.png)
+
+- Statistics screen of this application
+
+![screenshot](All.png)
 
 
 
+## Packages and Credits
+
+- [Animated Snackbar](https://github.com/JulyWitch/animated_snack_bar)
+- [Auto size text](https://github.com/simc/auto_size_text)
+- [Fl chart](https://github.com/imaNNeoFighT/fl_chart)
+- [Flutter Slidable](https://github.com/letsar/flutter_slidable)
+- [Flutter typeahead](https://github.com/AbdulRahmanAlHamali/flutter_typeahead)
+- [Google fonts](https://github.com/material-foundation/google-fonts-flutter)
+- [Hive flutter](https://github.com/hivedb/hive/tree/master/hive_flutter)
+- [Shared preferences](https://github.com/flutter/plugins/tree/main/packages/shared_preferences/shared_preferences)
+- [Time zone](https://github.com/srawlins/timezone)
+- [Url launcher](https://github.com/flutter/plugins/tree/main/packages/url_launcher/url_launcher)
+- [Flutter laucher icons](https://github.com/fluttercommunity/flutter_launcher_icons/)
+- [Build runner](https://github.com/dart-lang/build/tree/master/build_runner)
+- [Hive generator](https://github.com/hivedb/hive/tree/master/hive_generator)
 
 
 
+## Google Play Store
+
+The project is available for download on the Google Play Store [here](https://play.google.com/store/apps/details?id=com.aswinofficial3.mtracker).
+
+
+## License
+
+[![License](https://img.shields.io/:License-MIT-blue.svg?style=flat-square)](http://badges.mit-license.org)
+- MIT License
+- Copyright 2022 © [ASWINSUBHASH](https://github.com/aswinsubhash)
 
 
 
