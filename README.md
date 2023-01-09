@@ -6,6 +6,15 @@ complete details about one's spending and earnings. Answer
 the questions such as What, Where and How much money
 spent.
 
+## Table of contenst
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screeshots](#screenshots)
+- [Packages and Credits](#packages-and-credits)
+- [Google Play Store](#google-play-store)
+- [License](#license)
+
 ## Installation
 
 To install and run this project, you will need to have the following dependencies installed on
