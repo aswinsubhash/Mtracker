@@ -34,8 +34,9 @@ User can do  the following:
 - Montior transaction flow using the graphs in the statistics screen were the user can see the type wise graphs of current and current year
 
 ## Screenshots
+- Home Screen of this application
 
-![screenshot](Home.png)  - This is the homescreen of this application
+![screenshot](Home.png) 
 
 
 
