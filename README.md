@@ -38,7 +38,6 @@ User can do  the following:
 
 - Add transaction in any category using the add trasaction screen 
 - Reset the app data in setting, so the entire app data will be cleared
-- Can see the total balance of the last three months on the home screen, so it's very easy for the user to check the last months transaction amount in a simple click
 - Easily filter the transactions using the dropdowns in all transaction and statistics screen, in all transaction screen user can see the transactions according to transaction type, today wise, this month, and month wise of the current year
 - Montior transaction flow using the graphs in the statistics screen were the user can see the type wise graphs of current and current year
 
