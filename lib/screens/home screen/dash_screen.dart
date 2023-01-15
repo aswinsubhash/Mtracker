@@ -66,7 +66,6 @@ class _DashScreenState extends State<DashScreen> {
                   onTap: (newIntex) {
                     setState(() {
                       currentSelectedIntex = newIntex;
-                      print(currentSelectedIntex);
                     }); 
                   },
                   items: const [

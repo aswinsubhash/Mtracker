@@ -163,8 +163,10 @@ class _ScreenEditTransactionState extends State<ScreenEditTransaction> {
               .bottom, // Position of snackbar on mobile devices
         ).show(context);
         if (!mounted) return;
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const DashScreen()));
+      Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(builder: (ctx3) {
+        return const DashScreen();
+      }), (route) => false); 
       } else {
         if (!mounted) return;
         AnimatedSnackBar.material(
