@@ -41,8 +41,6 @@ class _ScreenHomeState extends State<ScreenHome> {
 
   @override
   Widget build(BuildContext context) {
-
-
     return WillPopScope(
       onWillPop: () async {
         final shouldPop = await showDialog<bool>(
@@ -117,7 +115,8 @@ class _ScreenHomeState extends State<ScreenHome> {
                                 decoration: const BoxDecoration(
                                   image: DecorationImage(
                                     image: AssetImage(
-                                        'assets/images/no trans.png'),
+                                      'assets/images/no trans.png',
+                                    ),
                                   ),
                                 ),
                               ),
