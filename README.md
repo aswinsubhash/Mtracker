@@ -10,7 +10,7 @@ spent.
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Screeshots](#screenshots)
+- [Screenshots](#screenshots)
 - [Packages and Credits](#packages-and-credits)
 - [Google Play Store](#google-play-store)
 - [License](#license)
@@ -42,19 +42,11 @@ User can do  the following:
 - Easily filter the transactions using the dropdowns in all transaction and statistics screen, in all transaction screen user can see the transactions according to transaction type, today wise, this month, and month wise of the current year
 - Montior transaction flow using the graphs in the statistics screen were the user can see the type wise graphs of current and current year
 
-## Screenshots
+## Screenshots 
 
-- Home screen of this application
-
-![screenshot](Home.png)
-
-- All trasaction screen of this application
-
-![screenshot](All.png)
-
-- Statistics screen of this application
-
-![screenshot](Stat.png)
+Home Screen                    |   All transaction Screen             |  Statistics Screen 
+:-------------------------:|:-------------------------:|:-------------------------:|
+![](Home.png)|![](All.png)|![](Stat.png)|
 
 
 

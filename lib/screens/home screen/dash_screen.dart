@@ -13,18 +13,18 @@ class DashScreen extends StatefulWidget {
 }
 int currentSelectedIntex = 0;
 class _DashScreenState extends State<DashScreen> {
- 
-
-  @override
-  Widget build(BuildContext context) {
-    final List<Widget> pages = [
-      const ScreenHome(),
+     final List<Widget> pages = [
+      const ScreenHome(), 
       const ScreenAllTransactions(),
       const ScreenAddTrasaction(),
       const ScreenStatistics(),
       const ScreenSettings()
 
     ];
+
+  @override
+  Widget build(BuildContext context) {
+
     return Scaffold(
       floatingActionButton: SizedBox(
         height: 68,
@@ -66,6 +66,7 @@ class _DashScreenState extends State<DashScreen> {
                   onTap: (newIntex) {
                     setState(() {
                       currentSelectedIntex = newIntex;
+                      print(currentSelectedIntex);
                     }); 
                   },
                   items: const [
