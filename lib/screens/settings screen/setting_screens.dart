@@ -103,7 +103,7 @@ class _ScreenSettingsState extends State<ScreenSettings> {
                       children: const [
                         Text('Version', style: TextStyle(fontSize: 15),),
                         Text(
-                          '1.0.0',
+                          '1.0.2',
                           style: TextStyle(fontSize: 12),
                         ),
                       ],

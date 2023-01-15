@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:mtracker/db/functions/db_helper.dart';
 import 'package:mtracker/db/model/trasaction_model.dart';
 import 'package:mtracker/main.dart';
-import 'package:mtracker/screens/home%20screen/dash_screen.dart';
 import 'package:mtracker/screens/home%20screen/widgets/balance_card_widget.dart';
 import 'package:mtracker/screens/home%20screen/widgets/chart_widget.dart';
 import 'package:mtracker/screens/home%20screen/widgets/common_widgets.dart';
@@ -42,20 +41,7 @@ class _ScreenHomeState extends State<ScreenHome> {
 
   @override
   Widget build(BuildContext context) {
-    List<String> months = [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-      'July',
-      'August',
-      'September',
-      'October',
-      'November',
-      'December'
-    ];
+
 
     return WillPopScope(
       onWillPop: () async {
@@ -112,98 +98,6 @@ class _ScreenHomeState extends State<ScreenHome> {
                     ],
                   ),
                   commonSizedBox(20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      //first  month container
-                      InkWell(
-                        onTap: () {
-                          setState(() {
-                            monthIndex = 3;
-                            today =
-                                DateTime(now.year, now.month - 2, today.day);
-                          });
-                        },
-                        child: Container(
-                          width: MediaQuery.of(context).size.width * 0.26,
-                          height: MediaQuery.of(context).size.height * 0.05,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: monthIndex == 3
-                                ? const Color.fromARGB(255, 101, 209, 190)
-                                : const Color.fromARGB(255, 217, 217, 217),
-                          ),
-                          alignment: Alignment.center,
-                          child: Text(
-                            months[now.month - 3],
-                            style: TextStyle(
-                                fontSize: 14,
-                                color: monthIndex == 3
-                                    ? Colors.white
-                                    : Colors.black),
-                          ),
-                        ),
-                      ),
-                      //second month container
-                      InkWell(
-                        onTap: () {
-                          setState(() {
-                            monthIndex = 2;
-                            today =
-                                DateTime(now.year, now.month - 1, today.day);
-                          });
-                        },
-                        child: Container(
-                          width: MediaQuery.of(context).size.width * 0.26,
-                          height: MediaQuery.of(context).size.height * 0.05,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: monthIndex == 2
-                                ? const Color.fromARGB(255, 101, 209, 190)
-                                : const Color.fromARGB(255, 217, 217, 217),
-                          ),
-                          alignment: Alignment.center,
-                          child: Text(
-                            months[now.month - 2],
-                            style: TextStyle(
-                                fontSize: 14,
-                                color: monthIndex == 2
-                                    ? Colors.white
-                                    : Colors.black),
-                          ),
-                        ),
-                      ),
-                      //third month container
-                      InkWell(
-                        onTap: () {
-                          setState(() {
-                            monthIndex = 1;
-                            today = DateTime.now();
-                          });
-                        },
-                        child: Container(
-                          width: MediaQuery.of(context).size.width * 0.26,
-                          height: MediaQuery.of(context).size.height * 0.05,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: monthIndex == 1
-                                ? const Color.fromARGB(255, 101, 209, 190)
-                                : const Color.fromARGB(255, 217, 217, 217),
-                          ),
-                          alignment: Alignment.center,
-                          child: Text(
-                            months[now.month - 1],
-                            style: TextStyle(
-                                fontSize: 14,
-                                color: monthIndex == 1
-                                    ? Colors.white
-                                    : Colors.black),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  commonSizedBox(20),
                   FutureBuilder<List<TransactionModel>>(
                     future: dbHelper.fetch(),
                     builder: (context, snapshot) {
@@ -214,15 +108,18 @@ class _ScreenHomeState extends State<ScreenHome> {
                         if (snapshot.data!.isEmpty) {
                           return Column(
                             children: [
-                              commonSizedBox(65),
+                              commonSizedBox(
+                                  MediaQuery.of(context).size.height / 6),
                               Container(
                                 width: MediaQuery.of(context).size.width * 0.8,
                                 height:
                                     MediaQuery.of(context).size.height * 0.35,
                                 decoration: const BoxDecoration(
-                                    image: DecorationImage(
-                                        image: AssetImage(
-                                            'assets/images/no trans.png'))),
+                                  image: DecorationImage(
+                                    image: AssetImage(
+                                        'assets/images/no trans.png'),
+                                  ),
+                                ),
                               ),
                               const Padding(
                                 padding: EdgeInsets.all(8.0),
