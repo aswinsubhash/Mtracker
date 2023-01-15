@@ -6,6 +6,7 @@ import 'package:mtracker/screens/settings%20screen/widgets/feedback.dart';
 import 'package:mtracker/screens/settings%20screen/widgets/privacy_policy_widget.dart';
 import 'package:mtracker/screens/settings%20screen/widgets/reset_data_pop.dart';
 import 'package:mtracker/screens/settings%20screen/widgets/settings_widget.dart';
+import 'package:share_plus/share_plus.dart';
 
 class ScreenSettings extends StatefulWidget {
   const ScreenSettings({super.key});
@@ -18,11 +19,13 @@ class _ScreenSettingsState extends State<ScreenSettings> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-       onWillPop: () async{
+      onWillPop: () async {
         currentSelectedIntex = 0;
-        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (ctx) {
-          return const DashScreen();
-        },));
+        Navigator.of(context).pushReplacement(MaterialPageRoute(
+          builder: (ctx) {
+            return const DashScreen();
+          },
+        ));
         return false;
       },
       child: Scaffold(
@@ -33,7 +36,7 @@ class _ScreenSettingsState extends State<ScreenSettings> {
           elevation: 0,
           title: const Text(
             'Settings',
-            style: TextStyle(color: Colors.black,fontSize: 22),
+            style: TextStyle(color: Colors.black, fontSize: 22),
           ),
         ),
         body: SafeArea(
@@ -65,13 +68,15 @@ class _ScreenSettingsState extends State<ScreenSettings> {
                       settingsIcon: Icons.privacy_tip_outlined,
                     ),
                   ),
-                  const SettingsWidget(
-                    settingsText: 'Share',
-                    settingsIcon: Icons.share_rounded,
-                  ),
-                  const SettingsWidget(
-                    settingsText: 'Rate This App',
-                    settingsIcon: Icons.star,
+                  InkWell(
+                    onTap: () {
+                      Share.share(
+                          'https://play.google.com/store/apps/details?id=com.aswinofficial3.mtracker');
+                    },
+                    child: const SettingsWidget(
+                      settingsText: 'Share',
+                      settingsIcon: Icons.share_rounded,
+                    ),
                   ),
                   InkWell(
                     onTap: () {
@@ -96,12 +101,15 @@ class _ScreenSettingsState extends State<ScreenSettings> {
                       settingsIcon: Icons.info,
                     ),
                   ),
-                  commonSizedBox(MediaQuery.of(context).size.height * 0.26),
+                  commonSizedBox(MediaQuery.of(context).size.height * 0.34),
                   Padding(
                     padding: const EdgeInsets.only(right: 20),
                     child: Column(
                       children: const [
-                        Text('Version', style: TextStyle(fontSize: 15),),
+                        Text(
+                          'Version',
+                          style: TextStyle(fontSize: 15),
+                        ),
                         Text(
                           '1.0.2',
                           style: TextStyle(fontSize: 12),
