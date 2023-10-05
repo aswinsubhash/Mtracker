@@ -143,8 +143,8 @@ class _ScreenHomeState extends State<ScreenHome> {
                               totalIncome: totalIncome,
                               totalExpense: totalExpense),
                           commonSizedBox(15),
-                          Row(
-                            children: const [
+                          const Row(
+                            children: [
                               Text(
                                 'Income',
                                 style: TextStyle(

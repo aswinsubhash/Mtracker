@@ -102,10 +102,10 @@ class _ScreenSettingsState extends State<ScreenSettings> {
                     ),
                   ),
                   commonSizedBox(MediaQuery.of(context).size.height * 0.34),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 20),
+                  const Padding(
+                    padding: EdgeInsets.only(right: 20),
                     child: Column(
-                      children: const [
+                      children: [
                         Text(
                           'Version',
                           style: TextStyle(fontSize: 15),
