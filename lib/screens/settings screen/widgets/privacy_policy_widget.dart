@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../home%20screen/widgets/common_widgets.dart';
 
 class PrivacyPolicy extends StatelessWidget {

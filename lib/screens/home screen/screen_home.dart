@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
 import '../../db/functions/db_helper.dart';
 import '../../db/model/trasaction_model.dart';
 import '../../main.dart';
@@ -8,7 +10,6 @@ import '../home%20screen/widgets/chart_widget.dart';
 import '../home%20screen/widgets/common_widgets.dart';
 import '../home%20screen/widgets/home_recent_widget.dart';
 import '../statistics%20screen/stastistics_screen.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 String profName = '';
 dynamic totalData;

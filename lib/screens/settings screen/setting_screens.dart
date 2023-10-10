@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
+
 import '../home%20screen/dash_screen.dart';
 import '../home%20screen/widgets/common_widgets.dart';
 import '../settings%20screen/widgets/about_us_widget.dart';
@@ -6,7 +8,6 @@ import '../settings%20screen/widgets/feedback.dart';
 import '../settings%20screen/widgets/privacy_policy_widget.dart';
 import '../settings%20screen/widgets/reset_data_pop.dart';
 import '../settings%20screen/widgets/settings_widget.dart';
-import 'package:share_plus/share_plus.dart';
 
 class ScreenSettings extends StatefulWidget {
   const ScreenSettings({super.key});
