@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mtracker/db/model/trasaction_model.dart';
+import '../../../db/model/trasaction_model.dart';
 
 class HomeRecentWiidget extends StatefulWidget {
   final List<TransactionModel> data;

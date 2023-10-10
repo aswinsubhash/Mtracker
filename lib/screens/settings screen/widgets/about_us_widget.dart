@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mtracker/screens/home%20screen/widgets/common_widgets.dart';
+
+import '../../home%20screen/widgets/common_widgets.dart';
 
 class AboutUsWidget extends StatelessWidget {
   const AboutUsWidget({super.key});

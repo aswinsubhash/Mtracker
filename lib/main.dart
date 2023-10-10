@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:mtracker/screens/splash%20screen/splash_screen.dart';
+import 'screens/splash%20screen/splash_screen.dart';
 
 const saveKey = 'profile name';
 

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mtracker/db/functions/db_helper.dart';
-import 'package:mtracker/screens/add%20trasaction/widget/amount_add_widget.dart';
-import 'package:mtracker/screens/add%20trasaction/widget/category_add_widget.dart';
-import 'package:mtracker/screens/add%20trasaction/widget/date_pick.dart';
-import 'package:mtracker/screens/add%20trasaction/widget/transaction_type_widget.dart';
-import 'package:mtracker/screens/home%20screen/dash_screen.dart';
-import 'package:mtracker/screens/home%20screen/widgets/common_widgets.dart';
+import '../../db/functions/db_helper.dart';
+import '../add%20trasaction/widget/amount_add_widget.dart';
+import '../add%20trasaction/widget/category_add_widget.dart';
+import '../add%20trasaction/widget/date_pick.dart';
+import '../add%20trasaction/widget/transaction_type_widget.dart';
+import '../home%20screen/dash_screen.dart';
+import '../home%20screen/widgets/common_widgets.dart';
 import 'package:animated_snack_bar/animated_snack_bar.dart';
 
 class ScreenAddTrasaction extends StatefulWidget {

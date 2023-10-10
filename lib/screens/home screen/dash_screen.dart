@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:mtracker/screens/add%20trasaction/screen_add_transaction.dart';
-import 'package:mtracker/screens/all%20transaction%20screen/all_transaction_screen.dart';
-import 'package:mtracker/screens/home%20screen/screen_home.dart';
-import 'package:mtracker/screens/settings%20screen/setting_screens.dart';
-import 'package:mtracker/screens/statistics%20screen/stastistics_screen.dart';
+
+import '../add%20trasaction/screen_add_transaction.dart';
+import '../all%20transaction%20screen/all_transaction_screen.dart';
+import '../home%20screen/screen_home.dart';
+import '../settings%20screen/setting_screens.dart';
+import '../statistics%20screen/stastistics_screen.dart';
 
 class DashScreen extends StatefulWidget {
   const DashScreen({Key? key}) : super(key: key);

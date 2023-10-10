@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mtracker/db/functions/db_helper.dart';
-import 'package:mtracker/db/model/trasaction_model.dart';
-import 'package:mtracker/screens/all%20transaction%20screen/widget/all_transaction_widget.dart';
-import 'package:mtracker/screens/home%20screen/dash_screen.dart';
-import 'package:mtracker/screens/home%20screen/widgets/common_widgets.dart';
+import '../../db/functions/db_helper.dart';
+import '../../db/model/trasaction_model.dart';
+import '../all%20transaction%20screen/widget/all_transaction_widget.dart';
+import '../home%20screen/dash_screen.dart';
+import '../home%20screen/widgets/common_widgets.dart';
 
 class ScreenAllTransactions extends StatefulWidget {
   const ScreenAllTransactions({Key? key}) : super(key: key);

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mtracker/screens/all%20transaction%20screen/widget/all_transaction_widget.dart';
-import 'package:mtracker/screens/home%20screen/dash_screen.dart';
-import 'package:mtracker/screens/splash%20screen/splash_screen.dart';
+import '../../all%20transaction%20screen/widget/all_transaction_widget.dart';
+import '../../home%20screen/dash_screen.dart';
+import '../../splash%20screen/splash_screen.dart';
 
 void resetDataPop(ctx) {
   showDialog(

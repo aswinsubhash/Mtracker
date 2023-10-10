@@ -1,7 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:mtracker/db/model/trasaction_model.dart';
-import 'package:mtracker/screens/statistics%20screen/stastistics_screen.dart';
+import '../../../db/model/trasaction_model.dart';
+import '../../statistics%20screen/stastistics_screen.dart';
 
 class ChartWidget extends StatefulWidget {
   ChartWidget({Key? key, required this.entireData, required this.height})

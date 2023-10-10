@@ -1,7 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mtracker/screens/home%20screen/widgets/common_widgets.dart';
+import '../../home%20screen/widgets/common_widgets.dart';
 
 class BalanceCard extends StatefulWidget {
  final int totalBalance;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mtracker/screens/profilename%20screen/screen_profile.dart';
+import '../profilename%20screen/screen_profile.dart';
 
 class ScreenOnBoard extends StatefulWidget {
   const ScreenOnBoard({super.key});

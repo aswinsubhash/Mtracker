@@ -1,6 +1,7 @@
 import 'package:hive_flutter/adapters.dart';
-import 'package:mtracker/db/model/trasaction_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../model/trasaction_model.dart';
 
 class DbHelper {
   Future addData(

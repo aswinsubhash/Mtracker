@@ -1,13 +1,13 @@
 import 'package:animated_snack_bar/animated_snack_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mtracker/db/functions/db_helper.dart';
-import 'package:mtracker/screens/add%20trasaction/widget/transaction_type_widget.dart';
-import 'package:mtracker/screens/edit%20transaction%20screen/widgets/edit_amount_widget.dart';
-import 'package:mtracker/screens/edit%20transaction%20screen/widgets/edit_category_widget.dart';
-import 'package:mtracker/screens/edit%20transaction%20screen/widgets/edit_date_widget.dart';
-import 'package:mtracker/screens/home%20screen/dash_screen.dart';
-import 'package:mtracker/screens/home%20screen/widgets/common_widgets.dart';
+import '../../db/functions/db_helper.dart';
+import '../add%20trasaction/widget/transaction_type_widget.dart';
+import '../edit%20transaction%20screen/widgets/edit_amount_widget.dart';
+import '../edit%20transaction%20screen/widgets/edit_category_widget.dart';
+import '../edit%20transaction%20screen/widgets/edit_date_widget.dart';
+import '../home%20screen/dash_screen.dart';
+import '../home%20screen/widgets/common_widgets.dart';
 
 class ScreenEditTransaction extends StatefulWidget {
   const ScreenEditTransaction(

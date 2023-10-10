@@ -1,11 +1,11 @@
 import 'package:animated_snack_bar/animated_snack_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
-import 'package:mtracker/db/functions/db_helper.dart';
-import 'package:mtracker/db/model/trasaction_model.dart';
-import 'package:mtracker/screens/all%20transaction%20screen/all_transaction_screen.dart';
-import 'package:mtracker/screens/edit%20transaction%20screen/edit_transaction_screen.dart';
-import 'package:mtracker/screens/home%20screen/dash_screen.dart';
+import '../../../db/functions/db_helper.dart';
+import '../../../db/model/trasaction_model.dart';
+import '../../all%20transaction%20screen/all_transaction_screen.dart';
+import '../../edit%20transaction%20screen/edit_transaction_screen.dart';
+import '../../home%20screen/dash_screen.dart';
 
 class AllTransactionWidget extends StatefulWidget {
   final List<TransactionModel> data;
