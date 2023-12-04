@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
       title: 'Mtracker',
       theme: ThemeData(
         primaryColor: const Color.fromARGB(255, 101, 209, 190),
+        useMaterial3: false,
       ),
       debugShowCheckedModeBanner: false,
       home:  const ScreenSplash(),

@@ -38,7 +38,7 @@ android {
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
-        https://ads.google.com/aw/signup/business?ocid=1438858009&euid=986117465&__u=8370552785&uscid=1438858009&__c=6341194641&authuser=0&sourceid=emp&subid=ww-ww-xs-ip-awhc-play_console%21o2&currentStep=goals&workflowSessionId=aE31510B1-A162-404C-8CD8-14AC95433F20--1targetCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     kotlinOptions {
